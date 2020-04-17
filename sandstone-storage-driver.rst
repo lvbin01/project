@@ -2,10 +2,10 @@
 SandStone iSCSI driver
 ================================
 
-SandStone USP volume can be used for virtual machines (VMs) in the
-OpenStack Block Storage driver that supports iSCSI  protocols
+SandStone USP volume can be used for virtual machines in the
+OpenStack Block Storage driver that supports iSCSI protocols.
 
-Before to go,  you should have installed `SandStone USP <http://www.szsandstone.com>`_
+Before to go,  you should have installed `SandStone USP <http://www.szsandstone.com>`_.
 
 System requirements
 ~~~~~~~~~~~~~~~~~~~
@@ -15,10 +15,6 @@ System requirements
 +=================+====================+
 | SandStone USP   | 3.2.2+             | 
 +-----------------+--------------------+
-
-| Cluster | version |
-| ----------| --------------|
-| SandStone USP | 3.2.2+    |
 
 To use the SandStone driver, the following are required:
 
@@ -30,7 +26,8 @@ To use the SandStone driver, the following are required:
 When creating a volume from image, add the following configuration keys in the ``[DEFAULT]``
 configuration group of the ``/etc/cinder/cinder.conf`` file:
 
-##Driver options
+Configuration example
+~~~~~~~~~~~~~~~~~~~~~
 
    The following table contains the configuration options supported by the
 SandStone driver.
@@ -50,21 +47,36 @@ SandStone driver.
       sandstone_pool = vms
       initiator_assign_sandstone_target_ip = {"iqn.1993-08.org.debian:01:3a9cd5c484a": "10.10.16.21"}
 
-###Replication parameters###
+Replication parameters
+~~~~~~~~~~~~~~~~~~~~~~
 
-| Parameter  | Description |
-| ----------| --------------|
-| volume_driver | indicates the loaded driver|
-| volume_backend_name | indicates the name of the backend|
-| san_ip | IP addresses of the management interfaces of a storage system|
-| san_login | Storage system user name           |
-| san_password | Storage system password           |
-| default_sandstone_target_ips | Default IP address of the iSCSI target port that is provided for compute nodes.          |
-| chap_username |  CHAP authentication username         |
-| chap_password |  CHAP authentication password         |
-| sandstone_pool |  SandStone storage pool resource name         |
-| initiator_assign_sandstone_target_ip |  Initiator assign target with assign ip         |
-
++----------------------+-------------------------------------+
+| Parameter            | Description                         | 
++======================+=====================================+
+| volume_driver        | Indicates the loaded driver         | 
++----------------------+-------------------------------------+
+| volume_backend_name  | Indicates the name of the backend   | 
++----------------------+-------------------------------------+
+| san_ip               | IP addresses of the management      | 
+|                      | interfaces of SandStone USP         |
++----------------------+-------------------------------------+
+| san_login            | Storage system user name            | 
++----------------------+-------------------------------------+
+| san_password         | Storage system password             | 
++----------------------+-------------------------------------+
+| default_sandstone    | Default IP address of the iSCSI     |
+| _target_ips          | target port that is provided for    |
+|                      | compute nodes                       |
++----------------------+-------------------------------------+
+| chap_username        | CHAP authentication username        | 
++----------------------+-------------------------------------+
+| chap_password        | SandStone storage pool resource name| 
++----------------------+-------------------------------------+
+| sandstone_pool       | SandStone storage pool resource name| 
++----------------------+-------------------------------------+
+| initiator_assign     | Initiator assign target with assign | 
+| _sandstone_target_ip | ip                                  |
++----------------------+-------------------------------------+
 
 
 #. After modifying the ``cinder.conf`` file, restart the ``cinder-volume``
@@ -76,14 +88,6 @@ SandStone driver.
 
    .. code-block:: console
 
-      $ openstack volume type create sdas
-      $ openstack volume type set --property sdas=True sdas
-
-   **Create and use replication volume types**
-
-   .. code-block:: console
-
-      $ openstack volume type create replication
-      $ openstack volume type set --property replication_enabled=True replication
-
+      $ openstack volume type create sandstone
+      $ openstack volume type set --property volume_backend_name=sds-iscsi sandstone
 
