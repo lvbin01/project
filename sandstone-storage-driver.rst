@@ -5,7 +5,7 @@ SandStone iSCSI driver
 SandStone USP volume can be used for virtual machines (VMs) in the
 OpenStack Block Storage driver that supports iSCSI  protocols
 
-Before to go,  you should have installed [SandStone USP](http://www.szsandstone.com)
+Before to go,  you should have installed `SandStone USP <http://www.szsandstone.com>`_
 
 System requirements
 ~~~~~~~~~~~~~~~~~~~
