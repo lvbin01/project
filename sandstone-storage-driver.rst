@@ -94,3 +94,8 @@ Replication parameters
 
       $ openstack volume type create sandstone
       $ openstack volume type set --property volume_backend_name=sds-iscsi sandstone
+      
+   .. config-table::
+      :config-target: SandStone
+
+      cinder.volume.drivers.sandston.sds_driver
