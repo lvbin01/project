@@ -1,9 +1,9 @@
-================================
-SandStone iSCSI driver
-================================
+======================
+SandStone iSCSI Driver
+======================
 
-SandStone USP volume can be used for virtual machines in the
-OpenStack Block Storage driver that supports iSCSI protocols.
+SandStone USP volume can be used as a block storage resource in
+the OpenStack Block Storage driver that supports iSCSI protocols.
 
 Before to go,  you should have installed `SandStoneUSP <http:
 //www.szsandstone.com>`_.
@@ -51,7 +51,7 @@ the SandStone driver.
    sandstone_pool = vms
    initiator_assign_sandstone_target_ip = {"iqn.1993-08.org.debian:01:3a9cd5c484a": "10.10.16.21"}
 
-Replication parameters
+General parameters
 ~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------+-------------------------------------+
@@ -74,7 +74,7 @@ Replication parameters
 +----------------------+-------------------------------------+
 | chap_username        | CHAP authentication username        |
 +----------------------+-------------------------------------+
-| chap_password        | SandStone storage pool resource name|
+| chap_password        | CHAP authentication password        |
 +----------------------+-------------------------------------+
 | sandstone_pool       | SandStone storage pool resource name|
 +----------------------+-------------------------------------+
@@ -94,8 +94,4 @@ Replication parameters
 
       $ openstack volume type create sandstone
       $ openstack volume type set --property volume_backend_name=sds-iscsi sandstone
-      
-.. config-table::
-   :config-target: SandStone
-   
-   cinder.volume.drivers.sandston.sds_driver
+
