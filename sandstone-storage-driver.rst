@@ -1,11 +1,11 @@
 ==========================================
-#SandStone iSCSI driver
+SandStone iSCSI driver
 ==========================================
 
 SandStone USP volume can be used for virtual machines (VMs) in the
 OpenStack Block Storage driver that supports iSCSI  protocols
 
-##System requirements
+##System requirements##
 
 | Cluster | version |
 | ----------| --------------|
@@ -41,7 +41,7 @@ SandStone driver.
       sandstone_pool = vms
       initiator_assign_sandstone_target_ip = {"iqn.1993-08.org.debian:01:3a9cd5c484a": "10.10.16.21"}
 
-###Replication parameters
+###Replication parameters###
 
 | Parameter  | Description |
 | ----------| --------------|
