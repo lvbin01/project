@@ -32,7 +32,7 @@ Configuration example
    The following table contains the configuration options supported by the
 SandStone driver.
 
-   .. code-block:: ini
+    .. code-block:: ini
     
       [DEFAULT]
       enabled_backends = sds-iscsi
