@@ -29,24 +29,24 @@ configuration group of the ``/etc/cinder/cinder.conf`` file:
 Configuration example
 ~~~~~~~~~~~~~~~~~~~~~
 
-   The following table contains the configuration options supported by the SandStone driver.
+The following table contains the configuration options supported by the SandStone driver.
 
-   .. code-block:: ini
+.. code-block:: ini
     
-      [DEFAULT]
-      enabled_backends = sds-iscsi
+   [DEFAULT]
+   enabled_backends = sds-iscsi
 
-      [sds-iscsi]
-      volume_driver = cinder.volume.drivers.sandstone.sds_driver.SdsISCSIDriver
-      volume_backend_name = sds-iscsi
-      san_ip = 10.10.16.21
-      san_login = admin
-      san_password = admin
-      default_sandstone_target_ips = 10.10.16.21,10.10.16.22,10.10.16.23
-      chap_username = 123456789123
-      chap_password = 1234567891234
-      sandstone_pool = vms
-      initiator_assign_sandstone_target_ip = {"iqn.1993-08.org.debian:01:3a9cd5c484a": "10.10.16.21"}
+   [sds-iscsi]
+   volume_driver = cinder.volume.drivers.sandstone.sds_driver.SdsISCSIDriver
+   volume_backend_name = sds-iscsi
+   san_ip = 10.10.16.21
+   san_login = admin
+   san_password = admin
+   default_sandstone_target_ips = 10.10.16.21,10.10.16.22,10.10.16.23
+   chap_username = 123456789123
+   chap_password = 1234567891234
+   sandstone_pool = vms
+   initiator_assign_sandstone_target_ip = {"iqn.1993-08.org.debian:01:3a9cd5c484a": "10.10.16.21"}
 
 Replication parameters
 ~~~~~~~~~~~~~~~~~~~~~~
