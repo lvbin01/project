@@ -11,28 +11,30 @@ System requirements
 ~~~~~~~~~~~~~~~~~~~
 
 +-----------------+--------------------+
-| Cluster         | version            | 
+| Cluster         | version            |
 +=================+====================+
-| SandStone USP   | 3.2.3+             | 
+| SandStone USP   | 3.2.3+             |
 +-----------------+--------------------+
 
 To use the SandStone driver, the following are required:
 
-- Network connectivity between the OpenStack host and the SandStone USP management
-  interfaces
+- Network connectivity between the OpenStack host and the 
+SandStone USP management interfaces
 
 - HTTPS or HTTP must be enabled on the array
 
-When creating a volume from image, add the following configuration keys in the ``[DEFAULT]``
+When creating a volume from image, add the following
+ configuration keys in the ``[DEFAULT]``
 configuration group of the ``/etc/cinder/cinder.conf`` file:
 
 Configuration example
 ~~~~~~~~~~~~~~~~~~~~~
 
-The following table contains the configuration options supported by the SandStone driver.
+The following table contains the configuration options supported
+ by the SandStone driver.
 
 .. code-block:: ini
-    
+
    [DEFAULT]
    enabled_backends = sds-iscsi
 
@@ -52,30 +54,30 @@ Replication parameters
 ~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------+-------------------------------------+
-| Parameter            | Description                         | 
+| Parameter            | Description                         |
 +======================+=====================================+
-| volume_driver        | Indicates the loaded driver         | 
+| volume_driver        | Indicates the loaded driver         |
 +----------------------+-------------------------------------+
-| volume_backend_name  | Indicates the name of the backend   | 
+| volume_backend_name  | Indicates the name of the backend   |
 +----------------------+-------------------------------------+
-| san_ip               | IP addresses of the management      | 
+| san_ip               | IP addresses of the management      |
 |                      | interfaces of SandStone USP         |
 +----------------------+-------------------------------------+
-| san_login            | Storage system user name            | 
+| san_login            | Storage system user name            |
 +----------------------+-------------------------------------+
-| san_password         | Storage system password             | 
+| san_password         | Storage system password             |
 +----------------------+-------------------------------------+
 | default_sandstone    | Default IP address of the iSCSI     |
 | _target_ips          | target port that is provided for    |
 |                      | compute nodes                       |
 +----------------------+-------------------------------------+
-| chap_username        | CHAP authentication username        | 
+| chap_username        | CHAP authentication username        |
 +----------------------+-------------------------------------+
-| chap_password        | SandStone storage pool resource name| 
+| chap_password        | SandStone storage pool resource name|
 +----------------------+-------------------------------------+
-| sandstone_pool       | SandStone storage pool resource name| 
+| sandstone_pool       | SandStone storage pool resource name|
 +----------------------+-------------------------------------+
-| initiator_assign     | Initiator assign target with assign | 
+| initiator_assign     | Initiator assign target with assign |
 | _sandstone_target_ip | ip                                  |
 +----------------------+-------------------------------------+
 
@@ -91,4 +93,6 @@ Replication parameters
 
       $ openstack volume type create sandstone
       $ openstack volume type set --property volume_backend_name=sds-iscsi sandstone
+
+
 
