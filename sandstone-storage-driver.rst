@@ -5,7 +5,8 @@ SandStone iSCSI driver
 SandStone USP volume can be used for virtual machines in the
 OpenStack Block Storage driver that supports iSCSI protocols.
 
-Before to go,  you should have installed `SandStone USP <http://www.szsandstone.com>`_.
+Before to go,  you should have installed `SandStone
+USP <http://www.szsandstone.com>`_.
 
 System requirements
 ~~~~~~~~~~~~~~~~~~~
@@ -18,13 +19,14 @@ System requirements
 
 To use the SandStone driver, the following are required:
 
-- Network connectivity between the OpenStack host and the SandStone USP management interfaces.
+- Network connectivity between the OpenStack host and the SandStone
+USP management interfaces.
 
 - HTTPS or HTTP must be enabled on the array.
 
-When creating a volume from image, add the following:
-configuration keys in the ``[DEFAULT]``
-configuration group of the ``/etc/cinder/cinder.conf`` file
+When creating a volume from image, add the following
+configuration keys in the ``[DEFAULT]``,configuration
+group of the ``/etc/cinder/cinder.conf`` file
 
 Configuration example
 ~~~~~~~~~~~~~~~~~~~~~
