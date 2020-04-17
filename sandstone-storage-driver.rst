@@ -13,7 +13,7 @@ System requirements
 +-----------------+--------------------+
 | Cluster         | version            | 
 +=================+====================+
-| SandStone USP   | 3.2.2+             | 
+| SandStone USP   | 3.2.3+             | 
 +-----------------+--------------------+
 
 To use the SandStone driver, the following are required:
