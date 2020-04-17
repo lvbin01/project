@@ -18,20 +18,20 @@ System requirements
 
 To use the SandStone driver, the following are required:
 
-- Network connectivity between the OpenStack host and the 
-SandStone USP management interfaces
+- Network connectivity between the OpenStack host and the
+SandStone USP management interfaces.
 
-- HTTPS or HTTP must be enabled on the array
+- HTTPS or HTTP must be enabled on the array.
 
 When creating a volume from image, add the following
- configuration keys in the ``[DEFAULT]``
+configuration keys in the ``[DEFAULT]``.
 configuration group of the ``/etc/cinder/cinder.conf`` file:
 
 Configuration example
 ~~~~~~~~~~~~~~~~~~~~~
 
 The following table contains the configuration options supported
- by the SandStone driver.
+by the SandStone driver.
 
 .. code-block:: ini
 
