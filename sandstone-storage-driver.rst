@@ -20,7 +20,7 @@ System requirements
 To use the SandStone driver, the following are required:
 
 - Network connectivity between the OpenStack host and the SandStone
-USP management interfaces.
+  USP management interfaces.
 
 - HTTPS or HTTP must be enabled on the array.
 
